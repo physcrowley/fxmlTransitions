@@ -1,0 +1,9 @@
+/target/
+/bin/
+*.class
+*.jar
+
+# local configuration files and folders
+.classpath
+.project
+.settings
