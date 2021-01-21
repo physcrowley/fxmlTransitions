@@ -7,12 +7,16 @@
 
 <Pane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.djc.transitions.TransitionsController">
     <children>
+    	<!-- first, so behind the ButtonBar -->
     	<Rectangle fx:id="r" fill="pink" height="350.0" width="350.0" />
+    	
+    	<!-- last, so on top of the Rectangle -->
     	<ButtonBar layoutY="5.0">
     		<buttons>
     			<Button fx:id="run" onAction="#runAnimation" text="Run" />
-    			<Button fx:id="reset" onAction="#toHome" text="Reset" />
+    			<Button fx:id="home" onAction="#toHome" text="Home" />
     		</buttons>
-    	</ButtonBar>   	
+    	</ButtonBar>
+    	   	
     </children>
 </Pane>
