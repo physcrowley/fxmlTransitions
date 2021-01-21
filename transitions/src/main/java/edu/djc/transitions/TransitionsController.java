@@ -72,11 +72,10 @@ public class TransitionsController {
         scale.setToY(0.2); 
              
         //Setting parallel transition
-        ParallelTransition transition = new ParallelTransition(r, 
-        translate, fill, rotate, scale); 
+        ParallelTransition transition = new ParallelTransition
+        		(r, translate, fill, rotate, scale); 
         transition.setCycleCount(Timeline.INDEFINITE);
         transition.setAutoReverse(true); 
         transition.play();
-
     }
 }
