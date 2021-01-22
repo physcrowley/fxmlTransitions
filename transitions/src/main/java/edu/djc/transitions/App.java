@@ -19,6 +19,7 @@ public class App extends Application
     	FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("transitions.fxml"));
     	var scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setScene(scene);
+        stage.setTitle("JavaFX Scene Graph Demo with FXML"); 
         stage.show();
     }
 
