@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
@@ -7,12 +8,14 @@
 <Pane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.djc.transitions.TransitionsController">
     <children>
     	<!-- first, so behind the ButtonBar -->
-    	<Rectangle fx:id="r" fill="pink" height="350.0" width="350.0" />
+    	<Rectangle fx:id="r" fill="pink" height="350.0" width="350.0" layoutX="0" layoutY="0" />
     	
     	<!-- last, so on top of the Rectangle -->
-    	<Button fx:id="run" onAction="#runAnimation" text="Run" 
-    		layoutX="5.0" layoutY="5.0" prefWidth="80"/>
-
-    	   	
+    	<ButtonBar layoutX="0" layoutY="5.0">
+    		<buttons>
+    			<Button fx:id="run" onAction="#runAnimation" text="Run"/>
+    			<Button fx:id="restart" onAction="#restart" text="Restart" disable="true"/>
+    		</buttons>
+    	</ButtonBar>
     </children>
 </Pane>
