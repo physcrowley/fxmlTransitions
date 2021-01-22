@@ -35,11 +35,6 @@ public class TransitionsController {
      */
     
     @FXML
-    private void toHome() throws IOException {
-    	App.setRoot("home");
-    }
-    
-    @FXML
     private void runAnimation() {
     	/* This prevents launching the infinite animation more than 
 		 * once, which produces weird results.
