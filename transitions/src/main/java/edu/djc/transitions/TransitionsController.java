@@ -27,7 +27,10 @@ public class TransitionsController {
     private Rectangle r;
     
     @FXML
-    private Button run;
+    private Button run, restart;
+    
+    // local
+    private ParallelTransition transition;
     
     
     /*
@@ -40,13 +43,14 @@ public class TransitionsController {
 		 * once, which produces weird results.
 		 */
     	run.setDisable(true);
-    	
+    	restart.setDisable(false);
     	
 		/*
 		 * This animation is adapted from the non-FXML example on
 		 * this site: http://mrbool.com/a-complete-guide-to-javafx/33010
 		 */
-    	TranslateTransition translate = 
+        //Translate transition
+    	  TranslateTransition translate = 
         new TranslateTransition(Duration.millis(850)); 
         translate.setToX(400); 
         translate.setToY(400); 
@@ -65,10 +69,24 @@ public class TransitionsController {
         scale.setToY(0.2); 
              
         //Setting parallel transition
-        ParallelTransition transition = new ParallelTransition
+        transition = new ParallelTransition
         		(r, translate, fill, rotate, scale); 
         transition.setCycleCount(Timeline.INDEFINITE);
         transition.setAutoReverse(true); 
         transition.play();
+    }
+    
+    @FXML
+    private void restart()
+    {
+    	// back to the top
+    	r.setTranslateX(0);
+    	r.setTranslateY(0);
+    	r.setRotate(0);
+    	r.setFill(Color.PINK);
+    	r.setScaleX(1);
+    	r.setScaleY(1);
+    	
+    	transition.playFromStart();
     }
 }
