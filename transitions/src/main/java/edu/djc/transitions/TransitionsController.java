@@ -48,8 +48,9 @@ public class TransitionsController {
 		/*
 		 * This animation is adapted from the non-FXML example on
 		 * this site: http://mrbool.com/a-complete-guide-to-javafx/33010
-		 */    	
-    	TranslateTransition translate = 
+		 */
+        //Translate transition
+    	  TranslateTransition translate = 
         new TranslateTransition(Duration.millis(850)); 
         translate.setToX(400); 
         translate.setToY(400); 
